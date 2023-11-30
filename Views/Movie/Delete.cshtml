@@ -1,0 +1,16 @@
+﻿@model Atelier_2.Models.Movie
+
+<h2>Delete movie : </h2>
+
+<h3>Are you sure you want to delete this movie?</h3>
+<div>
+    <h4>Name : @Model.Name</h4>
+    <!-- Add other details as needed -->
+</div>
+
+<form asp-action="Delete" method="post">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a asp-action="Index" class="btn btn-primary">Cancel</a>
+</form>

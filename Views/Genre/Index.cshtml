@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Atelier_2.Models.Genre>
+
+<h2> Movies' Categories : </h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var genre in Model)
+        {
+            <tr>
+                <td>@genre.Id</td>
+                <td>@genre.Name</td>
+               
+            </tr>
+        }
+    </tbody>
+</table>
+<p>
+    <a asp-action="Create" class="btn btn-primary">Add a new category !</a>
+</p>
+
